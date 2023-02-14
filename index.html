@@ -1,54 +1,78 @@
-clear<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-    <meta charset="utf-8"></meta>
-    <meta name="googke-site-verification" content="googlee0dbb2b96a10558c.html">
-    <title>Stephannie Gallery</title>
+    <meta charset="UTF-8">
+    <title>Pedro Henrique Site</title>
     <link rel="stylesheet" href="index.css">
-    
+    <!---we had linked our css file----->
 </head>
 <body>
-<header>
-    <h1>stephannie-gallery</h1>
-</header>
-<main>
-    <div class="gallery">
-        <a href="" class="gallery-steh"></a>
-            <img src="steh.png" alt="Stephannie">
-            <div class="gallery">
-                <a href="" class="gallery-steh"></a>
-                    <img src="steh1.png" alt="Stephannie">
-                    <div class="gallery">
-                        <a href="" class="gallery-steh"></a>
-                            <img src="steh2.png" alt="Stephannie">
-                            <div class="gallery">
-                                <a href="" class="gallery-steh"></a>
-                                    <img src="steh3.png" alt="Stephannie">
-                                    <div class="gallery">
-                                        <a href="" class="gallery-steh"></a>
-                                            <img src="steh4.png" alt="Stephannie">
-                                            <div class="gallery">
-                                                <a href="" class="gallery-steh"></a>
-                                                    <img src="steh5.png" alt="Stephannie">
-                                                    <div class="gallery">
-                                                        <a href="" class="gallery-steh"></a>
-                                                            <img src="steh6.png" alt="Stephannie">
-                                                            <div class="gallery">
-                                                                <a href="" class="gallery-steh"></a>
-                                                                    <img src="steh7.png" alt="Stephannie">
-                                                                    <div class="gallery">
-                                                                        <a href="" class="gallery-steh"></a>
-                                                                            <img src="steh8.png" alt="Stephannie">
-                                                                            <div class="gallery">
-                                                                                <a href="" class="gallery-steh"></a>
-                                                                                    <img src="steh9.png" alt="Stephannie">
-                                                                                    <div class="gallery">
-                                                                                        <a href="" class="gallery-steh"></a>
-                                                                                            <img src="steh10.png" alt="Stephannie">
-</div>
-</main>
-<footer>
-    <span>Com Amor &copy; Ph</span>
-</footer>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='website.html'>Pedro Henrique Site</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>Sobre</a></li>
+                    <li><a href='#'>Serviços</a></li>
+                    <li><a href='#'>Contato</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Registro</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email' required >
+		    <input type='password'class='input-field'placeholder='Senha' required>
+		    <input type='checkbox'class='check-box'><span>Lembrar a senha</span>
+		    <button type='submit'class='submit-btn'>Log in</button>
+		 </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field'placeholder='Primeiro Nome' required>
+		     <input type='text'class='input-field'placeholder='Sobrenome' required>
+		     <input type='email'class='input-field'placeholder='Email' required>
+		     <input type='password'class='input-field'placeholder='Senha' required>
+		     <input type='password'class='input-field'placeholder='Confirme sua senha'  required>
+		     <input type='checkbox'class='check-box'><span>Eu concordo com os termos e condições</span>
+                    <button type='submit'class='submit-btn'>Registrar</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
